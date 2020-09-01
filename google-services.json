@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "456068472314",
+    "firebase_url": "https://aacm-7a779.firebaseio.com",
+    "project_id": "aacm-7a779",
+    "storage_bucket": "aacm-7a779.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:456068472314:android:e55bfca089a530939e1843",
+        "android_client_info": {
+          "package_name": "com.AACM"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "456068472314-cm5eeq2pbjo1dj0bjai0bajrdih1ua8i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyt3vpsoT_P-DWqvb0qrvt3PMU9uOBHlQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "456068472314-cm5eeq2pbjo1dj0bjai0bajrdih1ua8i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
