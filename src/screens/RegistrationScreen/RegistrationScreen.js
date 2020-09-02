@@ -3,12 +3,14 @@ import { Image, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import styles from "./styles";
 import { firebase } from "../../firebase/config";
+import DropDownPicker from "react-native-dropdown-picker";
 
 export default function RegistrationScreen({ navigation }) {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [userType, setUserType] = useState("rt");
 
   const onFooterLinkPress = () => {
     navigation.navigate("Login");
@@ -28,6 +30,7 @@ export default function RegistrationScreen({ navigation }) {
           id: uid,
           email,
           fullName,
+          userType,
         };
         const usersRef = firebase.firestore().collection("users");
         usersRef
@@ -93,6 +96,29 @@ export default function RegistrationScreen({ navigation }) {
           underlineColorAndroid="transparent"
           autoCapitalize="none"
         />
+        <View style={styles.userTypeContainer}>
+          <TouchableOpacity
+            style={[
+              styles.userTypeButton,
+              { backgroundColor: userType === "wh" ? "#788eec" : "white" },
+            ]}
+            onPress={() => setUserType("wh")}
+          >
+            <Text style={styles.userTypeButtonTitle}>WholeSeller</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={[
+              styles.userTypeButton,
+              { backgroundColor: userType === "rh" ? "#788eec" : "white" },
+            ]}
+            onPress={() => {
+              setUserType("rh");
+            }}
+          >
+            <Text style={styles.userTypeButtonTitle}> Retailer </Text>
+          </TouchableOpacity>
+        </View>
         <TouchableOpacity
           style={styles.button}
           onPress={() => onRegisterPress()}

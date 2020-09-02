@@ -8,7 +8,7 @@ export default StyleSheet.create({
   title: {},
   logo: {
     flex: 1,
-    height: 120,
+    height: 90,
     width: 90,
     alignSelf: "center",
     margin: 30,
@@ -38,6 +38,27 @@ export default StyleSheet.create({
     color: "white",
     fontSize: 16,
     fontWeight: "bold",
+  },
+  userTypeButtonTitle: {
+    color: "black",
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+  userTypeContainer: {
+    flex: 1,
+    flexDirection: "row",
+    marginRight: 30,
+    marginLeft: 30,
+    justifyContent: "space-around",
+    marginTop: 10,
+  },
+  userTypeButton: {
+    backgroundColor: "white",
+    borderRadius: 5,
+    height: 48,
+    paddingLeft: 10,
+    paddingRight: 10,
+    justifyContent: "center",
   },
   footerView: {
     flex: 1,
